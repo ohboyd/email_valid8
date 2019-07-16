@@ -2,6 +2,7 @@ Gem::Specification.new do |s|
   s.name        = 'email_valid8'
   s.version     = '0.0.1'
   s.license     = 'MIT'
+  s.homepage    = "https://github.com/ohboyd/email_valid8"
   s.authors     = ['Michael Boyd', 'Gary Foster']
   s.email       = 'mikeallenboyd@gmail.com'
   s.date        = '2019-07-16'
