@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'active_model'
 
 class TestEmailModel
   include ActiveModel::Model
