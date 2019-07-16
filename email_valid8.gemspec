@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'email_valid8'
-  s.version     = '0.1.0'
+  s.version     = '0.0.1'
   s.license     = 'MIT'
   s.authors     = ['Michael Boyd', 'Gary Foster']
   s.email       = 'mikeallenboyd@gmail.com'
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
                    on various stack overflow pages, this lets you include a single validator throughout your \
                    entire application. It can handle single emails, or even the odd case of multiple emails in a long \
                    string.'
-  s.files       = ['lib/email_validator.rb']
+  s.files       = ['lib/email_valid8.rb']
   s.require_paths = ['lib']
 
   s.add_dependency('activemodel', '~> 0')
