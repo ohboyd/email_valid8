@@ -23,7 +23,7 @@ class TestEmailModel
   validates_with EmailAddressValidator, fields: %i[email_by_any_other_name]
 end
 
-class TestEmailArrayModel
+class TestMultipleEmailsModel
   include ActiveModel::Model
   attr_accessor :email
 

@@ -45,7 +45,7 @@ RSpec.describe EmailAddressValidator, type: :validator do
   end
 
   describe 'multiples: true' do
-    subject { TestEmailArrayModel.new(email) }
+    subject { TestMultipleEmailsModel.new(email) }
 
     context 'string of comma-separated emails format' do
       it 'validates to true' do
@@ -53,7 +53,7 @@ RSpec.describe EmailAddressValidator, type: :validator do
                        'foob@example.com, barf@example.com, xanz@example.com',
                        'doot@example.com', 'poot@example.com']
         valid_items.each do |item|
-          model = TestEmailArrayModel.new(item)
+          model = TestMultipleEmailsModel.new(item)
           expect(model).to be_valid
         end
       end
@@ -86,7 +86,7 @@ RSpec.describe EmailAddressValidator, type: :validator do
                          'foo@@bar.com']
 
         invalid_items.each do |item|
-          model = TestEmailArrayModel.new(item)
+          model = TestMultipleEmailsModel.new(item)
           expect(model).to be_invalid
           expect(model.errors.full_messages.to_s).to include 'Email is not written in a valid format'
         end
