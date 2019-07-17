@@ -22,6 +22,7 @@ RSpec.describe EmailAddressValidator, type: :validator do
 
       it 'must be in the proper email format' do
         invalid_items = ['another@example@com',
+                         'foot@barkcom.',
                          'test@example.com,,',
                          'bar.foo@yahoo.com,',
                          '.....@a....',
