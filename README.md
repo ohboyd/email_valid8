@@ -11,7 +11,6 @@ Next, install the gem using
 ```
 bundle install
 ```
-This will work from the command line, but it's more useful inside a rails project.
 
 ## Usage
 #### In Application
