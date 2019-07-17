@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/email_valid8.svg)](https://badge.fury.io/rb/email_valid8)
+[![Codeship Status for ohboyd/email_valid8](https://app.codeship.com/projects/c25d4b70-8a67-0137-305f-360e0f58cb63/status?branch=master)](https://app.codeship.com/projects/354806)
+
 # Email Valid8
 
 ## Replace the Random Regex you Copied from Stack Overflow!
