@@ -1,13 +1,15 @@
-# Purpose
+# Email Valid8
+
+## Replace the Random Regex you Copied from Stack Overflow!
 This gem is meant to be an easy mixin for consistent email address validation using Ruby's standard URI library. It can be used to take single email addresses, or even multiple email addresses separated by a comma.
 
 ## Installation
 
-Add it to your Gemfile with:
+Add it to your Gemfile using:
 ```
 gem 'email_valid8'
 ```
-Next, install the gem using
+Next, install the gem by running:
 ```
 bundle install
 ```
