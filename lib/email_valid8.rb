@@ -13,17 +13,29 @@ class EmailAddressValidator < ActiveModel::Validator
       attrs = record.send(field)
       if multiples
         attrs.split(',').each do |attr|
-          attr.class == Array ? attr.each { |email| check_email(email, field, record) } : check_email(attr.strip, field, record)
+          attr.class == Array ? attr.each { |email| email_checker(email, field, record) } : email_checker(attr.strip, field, record)
         end
       else
-        check_email(attrs, field, record)
+        email_checker(attrs, field, record)
       end
     end
   end
 
-  def check_email(email, field, record)
-    return if email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/
+  def email_checker(email, field, record)
+    return if validation_check(email)
 
     record.errors.add(field, 'is not written in a valid format')
+  end
+
+  def validation_check(email)
+    email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/
+  end
+
+  def self.valid?(email)
+    validation_check(email)
+  end
+
+  def self.invalid?(email)
+    !validation_check(email)
   end
 end
