@@ -29,6 +29,6 @@ class EmailAddressValidator < ActiveModel::Validator
   end
 
   def self.valid?(email)
-    email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/
+    (email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/) || false
   end
 end
