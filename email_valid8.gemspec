@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'email_valid8'
-  s.version     = '0.0.5'
+  s.version     = '0.0.6'
   s.license     = 'MIT'
   s.homepage    = "https://github.com/ohboyd/email_valid8"
   s.authors     = ['Michael Boyd', 'Gary Foster']
