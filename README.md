@@ -29,15 +29,29 @@ Another feature of this gem is its ability to handle multiple emails in a comma-
 validates_with EmailAddressValidator, fields: %i[whole_lotta_emails], multiples: true
 ```
 
-<!-- #### Command Line
-TODO: explain how to use this in pry or IRB -->
-
-## Maintenance
-Steps to debug this gem, if there are any future issues:
-* Add `s.add_dependency('pry', '~> 0')` to the gemspec
-* Add `require 'pry'` to spec_helper.rb
-* Run `gem build email_valid8.gemspec` in the terminal to rebuild
-* Run `bundle install`
+#### From the Command Line
+It's also possible to use this tool in your console, irb, or a pry session. Just make sure that the gem is installed by running the following command in terminal:
+```
+$ gem install email_valid8
+``` 
+And you should see: 
+```
+Fetching: email_valid8-0.0.6.gem (100%)
+Successfully installed email_valid8-0.0.6
+Parsing documentation for email_valid8-0.0.6
+Installing ri documentation for email_valid8-0.0.6
+Done installing documentation for email_valid8 after 0 seconds
+1 gem installed
+```
+Then, open your console by running `rails c`, `irb`, or `pry` in the terminal. Once you have your terminal prompt, require the gem and you can test the validity of your email address by running the commands below:
+```
+irb(main):001:0> require 'email_valid8'
+=> true
+irb(main):002:0> EmailAddressValidator.valid?('admin@example.com')
+=> true
+irb(main):003:0> EmailAddressValidator.valid?('admin@@example.com')
+=> false
+```
 
 
 Check out [Faker Gem](https://github.com/stympy/faker) if you haven't! Made testing this gem a breeze.
