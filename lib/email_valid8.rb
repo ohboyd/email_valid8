@@ -1,5 +1,4 @@
 require 'active_model'
-require 'pry'
 
 class EmailAddressValidator < ActiveModel::Validator
   def validate(record)
