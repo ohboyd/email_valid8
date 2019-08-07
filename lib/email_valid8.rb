@@ -1,4 +1,5 @@
 require 'active_model'
+require 'pry'
 
 class EmailAddressValidator < ActiveModel::Validator
   def validate(record)
@@ -22,20 +23,12 @@ class EmailAddressValidator < ActiveModel::Validator
   end
 
   def email_checker(email, field, record)
-    return if validation_check(email)
+    return if email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/
 
     record.errors.add(field, 'is not written in a valid format')
   end
 
-  def validation_check(email)
-    email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/
-  end
-
   def self.valid?(email)
-    validation_check(email)
-  end
-
-  def self.invalid?(email)
-    !validation_check(email)
+    email =~ URI::MailTo::EMAIL_REGEXP && email !~ /[A-Z]/
   end
 end

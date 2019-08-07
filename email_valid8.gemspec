@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'email_valid8'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.license     = 'MIT'
   s.homepage    = "https://github.com/ohboyd/email_valid8"
   s.authors     = ['Michael Boyd', 'Gary Foster']
@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('faker', '~> 0')
   s.add_development_dependency('rake', '~> 0')
   s.add_development_dependency('rspec', '~> 3.7')
+  s.add_development_dependency('pry', '~> 0.12.2')
 end
